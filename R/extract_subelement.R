@@ -11,6 +11,14 @@
 #' @export
 #'
 #' @examples
+#' a_list <- list("foo" = c(1, 2, 3), "bar" = c("a", "b", "c"), "baz" = c(1:10))
+#' print(a_list)
+#' 
+#' # Get the first element of each item
+#' extract_subelement(a_list, 1)
+#' 
+#' # Get the nth element
+#' extract_subelement(a_list, c(1, 2, 3))
 extract_subelement <- function(x, n) {
   
   if (class(x) != "list") stop(add_ts("x must be a list"))
